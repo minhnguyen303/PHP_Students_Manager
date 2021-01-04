@@ -19,7 +19,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     switch ($action){
         case 'create':
-
+            $student = new Student($name, $gender, $birth, $subject, $from);
+            $manager->add($student);
+            unset($student);
+            break;
         case 'update':
             break;
     }
