@@ -11,14 +11,14 @@
 <table>
     <caption><h1><u>Danh sách học sinh</u></h1></caption>
     <tr>
-        <td colspan="7" id="colSearch">
-            <form action="" method="get">
+        <td colspan="6" id="colSearch">
+            <form action="index.php" method="post">
                 <label for="inputSearch">Search: </label>
                 <input id="inputSearch" name="search" placeholder="Tên học sinh cần tìm kiếm">
                 <button type="submit">Search</button>
             </form>
         </td>
-        <td>
+        <td colspan="2">
             <a href="Add_Page.php">
                 <button>Thêm học sinh</button>
             </a>
@@ -51,8 +51,23 @@
                 <td><?php echo $student->getSubject()?></td>
                 <td><?php echo $student->getFrom()?></td>
                 <td>
-                    <button>Sửa</button>
-                    <button>Xóa</button>
+                    <form action="Action_Page.php" method="post">
+                        <input id="inputActionEdit" type="text" name="action" value="edit" hidden="hidden">
+                        <script>
+                            function clickSubmit(action) {
+                                if (action === 'edit'){
+                                    document.getElementById('inputActionEdit').value = 'edit';
+                                }
+                                else {
+                                    document.getElementById('inputActionEdit').value = 'delete';
+                                }
+                                document.getElementById('btnSubmitEdit').click();
+                            }
+                        </script>
+                        <button id="btnSubmitEdit" hidden="hidden" type="submit"></button>
+                        <button type="button" onclick="clickSubmit('edit')">Sửa</button>
+                        <button type="button" onclick="clickSubmit('delete')">Xóa</button>
+                    </form>
                 </td>
             </tr>
         <?php endforeach;?>
