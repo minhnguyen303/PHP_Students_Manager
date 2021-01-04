@@ -73,7 +73,13 @@ class Manager
 
     public function loadData()
     {
-
+        $dataJson = file_get_contents(self::FILE_DATA_NAME);
+        $data = json_decode($dataJson);
+        $list = [];
+        foreach ($data as $value) {
+            $list[] = $this->arrayToStudent($value);
+        }
+        return $list;
     }
 
     public function arrayToStudent($array)
