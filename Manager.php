@@ -22,10 +22,10 @@ class Manager
 
     public function delete($index)
     {
-        
+        unset(self::$students[$index]);
     }
 
-    public function search($index)
+    public function search()
     {
         
     }
