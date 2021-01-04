@@ -17,7 +17,7 @@ class Manager
 
     public function get($index)
     {
-        
+        return self::$students[$index];
     }
 
     public function delete($index)
