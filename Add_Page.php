@@ -9,6 +9,7 @@
 </head>
 <body>
 <form action="" method="post">
+    <input type="text" name="action" value="create" hidden="hidden">
     <fieldset>
         <legend>Thêm sinh viên</legend>
         Tên: <input type="text" name="name">
