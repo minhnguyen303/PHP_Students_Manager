@@ -8,14 +8,15 @@
     <title>Students Manager</title>
 </head>
 <body>
-<form action="" method="post" id="formSearch" hidden="hidden"></form>
 <table>
     <caption><h1>Danh sách học sinh</h1></caption>
     <tr>
         <td colspan="8" id="colSearch">
-            <label for="inputSearch">Search: </label>
-            <input id="inputSearch" name="inputSearch" form="formSearch" placeholder="Tên học sinh cần tìm kiếm">
-            <button type="submit" form="formSearch">Search</button>
+            <form action="" method="get" id="formSearch">
+                <label for="inputSearch">Search: </label>
+                <input id="inputSearch" name="search" placeholder="Tên học sinh cần tìm kiếm">
+                <button type="submit">Search</button>
+            </form>
         </td>
     </tr>
     <tr>
