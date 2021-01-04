@@ -11,21 +11,21 @@
 <form action="" method="post">
     <fieldset>
         <legend>Thêm sinh viên</legend>
-        Tên: <input type="text">
+        Tên: <input type="text" name="name">
         Giới tính:
         <select name="gender">
             <option value="male">Nam</option>
             <option value="female">Nữ</option>
         </select>
-        Ngày sinh: <input type="date">
+        Ngày sinh: <input type="date" name="birth">
         Ngành học:
         <select name="subject">
             <option value="CNTT">CNTT</option>
-            <option value="CNTT">Điện</option>
-            <option value="CNTT">Chế biến thực phẩm</option>
-            <option value="CNTT">Kinh doanh</option>
+            <option value="Điện">Điện</option>
+            <option value="Chế biến thực phẩm">Chế biến thực phẩm</option>
+            <option value="Kinh doanh">Kinh doanh</option>
         </select>
-        Quê quán: <input type="text">
+        Quê quán: <input type="text" name="from">
         <button type="submit">Tạo</button>
         <a href="index.php"><button type="button">Hủy</button></a>
     </fieldset>
