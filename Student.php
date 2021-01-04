@@ -3,6 +3,8 @@
 
 class Student
 {
+    public static $CurrentStudentCode;
+
     protected $name;
     protected $gender;
     protected $birth;
@@ -25,7 +27,7 @@ class Student
         $this->birth = $birth;
         $this->subject = $subject;
         $this->from = $from;
-        $this->code = 0;
+        $this->code = "S" . str_pad(Student::$CurrentStudentCode + 1, 5, '0', STR_PAD_LEFT) . "A";
     }
 
     /**
@@ -115,15 +117,5 @@ class Student
     {
         return $this->code;
     }
-
-    /**
-     * @param int $code
-     */
-    public function setCode($code)
-    {
-        $this->code = $code;
-    }
-
-
 
 }
