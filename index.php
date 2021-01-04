@@ -12,7 +12,7 @@
     <caption><h1>Danh sách học sinh</h1></caption>
     <tr>
         <td colspan="8" id="colSearch">
-            <form action="" method="get" id="formSearch">
+            <form action="" method="get">
                 <label for="inputSearch">Search: </label>
                 <input id="inputSearch" name="search" placeholder="Tên học sinh cần tìm kiếm">
                 <button type="submit">Search</button>
