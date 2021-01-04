@@ -47,12 +47,11 @@ class Manager
 
     public function sortAZ()
     {
-        
+        sort(self::$students);
     }
 
     public function sortZA()
     {
-        
     }
 
     public function save()
