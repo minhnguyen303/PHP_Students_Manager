@@ -14,11 +14,13 @@ class Manager
     public function add($student)
     {
         self::$students[] = $student;
+        $this->saveData();
     }
 
     public function update($index, $student)
     {
         self::$students[$index] = $student;
+        $this->saveData();
     }
 
     public function get($index)
@@ -29,6 +31,7 @@ class Manager
     public function delete($index)
     {
         unset(self::$students[$index]);
+        $this->saveData();
     }
 
     public function getIndexByName($name)
