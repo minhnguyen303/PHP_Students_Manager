@@ -21,9 +21,8 @@
     <tr>
         <th>STT</th>
         <th>Tên</th>
-        <th>Tuổi</th>
         <th>Giới tính</th>
-        <th>Năm sinh</th>
+        <th>Ngày sinh</th>
         <th>Mã sinh viên</th>
         <th>Ngành học</th>
         <th>Quê quán</th>
