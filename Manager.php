@@ -25,9 +25,24 @@ class Manager
         unset(self::$students[$index]);
     }
 
-    public function search()
+    public function getIndexByName($name)
     {
-        
+        /*foreach (self::$students as $key=>$student){
+            $studentName = strtolower($student->getName());
+            $arrayName = explode(' ', strtolower($fullName));
+            $name = $arrayName[count($arrayName) - 1];
+            if ($studentName == $name[count($name)]){
+                return $key;
+            }
+        }*/
+        foreach (self::$students as $key=>$student){
+            $studentName = strtolower($student->getName());
+            $name = strtolower($name);
+            if ($studentName == $name){
+                return $key;
+            }
+        }
+        return -1;
     }
 
     public function sortAZ()
