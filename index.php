@@ -11,12 +11,17 @@
 <table>
     <caption><h1>Danh sách học sinh</h1></caption>
     <tr>
-        <td colspan="8" id="colSearch">
+        <td colspan="7" id="colSearch">
             <form action="" method="get">
                 <label for="inputSearch">Search: </label>
                 <input id="inputSearch" name="search" placeholder="Tên học sinh cần tìm kiếm">
                 <button type="submit">Search</button>
             </form>
+        </td>
+        <td>
+            <a href="Add_Page.php">
+                <button>Create</button>
+            </a>
         </td>
     </tr>
     <tr>
