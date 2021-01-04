@@ -19,15 +19,19 @@ class Student
      * @param $birth
      * @param $subject
      * @param $from
+     * @param $code
      */
-    public function __construct($name, $gender, $birth, $subject, $from)
+    public function __construct($name, $gender, $birth, $subject, $from, $code = null)
     {
         $this->name = $name;
         $this->gender = $gender;
         $this->birth = $birth;
         $this->subject = $subject;
         $this->from = $from;
-        $this->code = "S" . str_pad(Student::$CurrentStudentCode + 1, 5, '0', STR_PAD_LEFT) . "A";
+        if ($code == null)
+            $this->code = "S" . str_pad(Student::$CurrentStudentCode + 1, 5, '0', STR_PAD_LEFT) . "A";
+        else
+            $this->code = $code;
     }
 
     /**
@@ -117,6 +121,15 @@ class Student
     {
         return $this->code;
     }
+
+    /**
+     * @param string $code
+     */
+    public function setCode($code)
+    {
+        $this->code = $code;
+    }
+
 
     public function toArray()
     {

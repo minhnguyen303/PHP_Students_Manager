@@ -1,9 +1,15 @@
 <?php
-
+include_once 'Student.php';
 
 class Manager
 {
-    public static $students = [];
+    const FILE_DATA_NAME = 'data.json';
+    public static $students;
+
+    public function __construct()
+    {
+        self::$students = $this->loadData();
+    }
 
     public function add($student)
     {
@@ -55,13 +61,23 @@ class Manager
         rsort(self::$students);
     }
 
-    public function save()
+    public function saveData()
     {
-        
+        $data = [];
+        foreach (self::$students as $student) {
+            $data[] = $student->toArray();
+        }
+        $dataJson = json_encode($data);
+        file_put_contents(self::FILE_DATA_NAME, $dataJson);
     }
 
-    public function load()
+    public function loadData()
     {
-        
+
+    }
+
+    public function arrayToStudent($array)
+    {
+
     }
 }
