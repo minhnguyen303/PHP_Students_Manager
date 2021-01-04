@@ -118,4 +118,8 @@ class Student
         return $this->code;
     }
 
+    public function toArray()
+    {
+        return [$this->name, $this->gender, $this->birth, $this->code, $this->subject, $this->from];
+    }
 }
