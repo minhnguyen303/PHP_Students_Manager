@@ -2,6 +2,9 @@
 include_once 'Manager.php';
 include_once 'Student.php';
 
+// Create Manager //
+$manager = new Manager();
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     // Get action //
@@ -14,9 +17,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $subject = $_POST['subject'];
     $from = $_POST['from'];
 
-    // Create Manager //
-    $manager = new Manager();
-
     switch ($action){
         case 'create':
             $student = new Student($name, $gender, $birth, $subject, $from);
@@ -26,8 +26,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         case 'update':
             break;
     }
+    header('Location: index.php');
 }
-elseif ($_SERVER['REQUEST_METHOD'] == 'GET'){
-    echo 2;
+if ($_SERVER['REQUEST_METHOD'] == 'GET'){
+    echo 222;
 }
 

@@ -9,7 +9,7 @@
 </head>
 <body>
 <table>
-    <caption><h1>Danh sách học sinh</h1></caption>
+    <caption><h1><u>Danh sách học sinh</u></h1></caption>
     <tr>
         <td colspan="7" id="colSearch">
             <form action="" method="get">
@@ -34,6 +34,29 @@
         <th>Quê quán</th>
         <th></th>
     </tr>
+    <?php include_once 'Manager.php';?>
+    <?php include_once 'Action_Page.php';?>
+    <?php if (Manager::$students == null):?>
+        <tr>
+            <td colspan="7" style="text-align: center"><h3><i>Không có dữ liệu</i></h3></td>
+        </tr>
+    <?php else:?>
+        <?php foreach (Manager::$students as $key=>$student):?>
+            <tr>
+                <td><?php echo $key?></td>
+                <td><?php echo $student->getName()?></td>
+                <td><?php echo $student->getGender()?></td>
+                <td><?php echo $student->getBirth()?></td>
+                <td><?php echo $student->getCode()?></td>
+                <td><?php echo $student->getSubject()?></td>
+                <td><?php echo $student->getFrom()?></td>
+                <td>
+                    <button>Sửa</button>
+                    <button>Xóa</button>
+                </td>
+            </tr>
+        <?php endforeach;?>
+    <?php endif;?>
 </table>
 </body>
 </html>

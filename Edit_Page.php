@@ -15,8 +15,8 @@
         Tên: <input type="text" name="name">
         Giới tính:
         <select name="gender">
-            <option value="male">Nam</option>
-            <option value="female">Nữ</option>
+            <option value="Nam">Nam</option>
+            <option value="Nữ">Nữ</option>
         </select>
         Ngày sinh: <input type="date" name="birth" value="2020-12-20">
         Ngành học:
