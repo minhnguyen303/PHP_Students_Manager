@@ -20,7 +20,7 @@
         </td>
         <td>
             <a href="Add_Page.php">
-                <button>Create</button>
+                <button>Thêm học sinh</button>
             </a>
         </td>
     </tr>

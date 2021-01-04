@@ -8,7 +8,7 @@
     <title>Thêm sinh viên</title>
 </head>
 <body>
-<form action="" method="post">
+<form action="Action_Page.php" method="post">
     <input type="text" name="action" value="create" hidden="hidden">
     <fieldset>
         <legend>Thêm sinh viên</legend>

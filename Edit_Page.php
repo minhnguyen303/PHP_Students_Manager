@@ -8,7 +8,7 @@
     <title>Sửa thông tin sinh viên</title>
 </head>
 <body>
-<form action="" method="post">
+<form action="Action_Page.php" method="post">
     <input type="text" name="action" value="update" hidden="hidden">
     <fieldset>
         <legend>Sửa thông tin sinh viên</legend>
