@@ -25,6 +25,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             break;
         case 'update':
             break;
+        case 'edit':
+            break;
+        case 'delete':
+            $index = $_POST['index'];
+            $manager->delete($index);
+            break;
     }
     header('Location: index.php');
 }
