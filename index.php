@@ -38,7 +38,7 @@
         function clickSubmit(action,id) {
             let confirm = window.confirm("Do you really want to delete it !?!?!?");
             if (confirm == true) {
-                document.getElementById("btnSubmitEdit" + id).click();
+                document.getElementById("btnSubmitDelete" + id).click();
             }
         }
     </script>

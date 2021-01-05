@@ -26,7 +26,7 @@
             <option value="Python">Python</option>
         </select>
         Quê quán: <input type="text" name="from">
-        <button type="submit">Tạo</button>
+        <button type="submit">Thêm</button>
         <a href="index.php"><button type="button">Hủy</button></a>
     </fieldset>
 </form>

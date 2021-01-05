@@ -26,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         case 'update':
             break;
         case 'edit':
+
             break;
         case 'delete':
             $index = $_POST['index'];
