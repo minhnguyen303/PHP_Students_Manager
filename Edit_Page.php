@@ -13,23 +13,23 @@ include_once 'Manager.php';
 <body>
 <form action="Action_Page.php" method="post">
     <input type="text" name="action" value="update" hidden="hidden">
-    <input type="text" name="index" hidden="hidden">
+    <input id="index" type="text" name="index" hidden="hidden">
     <fieldset>
         <legend>Sửa thông tin sinh viên</legend>
-        Tên: <input type="text" name="name">
+        Tên: <input id="name" type="text" name="name">
         Giới tính:
-        <select name="gender">
+        <select id="gender" name="gender">
             <option value="Nam">Nam</option>
             <option value="Nữ">Nữ</option>
         </select>
-        Ngày sinh: <input type="date" name="birth" value="2020-12-20">
+        Ngày sinh: <input id="birth" type="date" name="birth"><!--value="2020-12-20"-->
         Ngành học:
-        <select name="subject">
+        <select id="subject" name="subject">
             <option value="PHP">PHP</option>
             <option value="Java">Java</option>
             <option value="Python">Python</option>
         </select>
-        Quê quán: <input type="text" name="from">
+        Quê quán: <input id="from" type="text" name="from">
         <button type="submit">Lưu</button>
         <a href="index.php"><button type="button">Hủy</button></a>
     </fieldset>
@@ -51,6 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $from = $student->getFrom();
 
     $script = "<script>
+            document.getElementById('index').value = '$index';
             document.getElementById('name').value = '$name';
             document.getElementById('gender').value = '$gender';
             document.getElementById('birth').value = '$birth';

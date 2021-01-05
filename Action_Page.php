@@ -24,7 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             unset($student);
             break;
         case 'update':
-
+            $index = $_POST['index'];
+            $student = new Student($name, $gender, $birth, $subject, $from);
+            $manager->update($index, $student);
             break;
         case 'delete':
             $index = $_POST['index'];
