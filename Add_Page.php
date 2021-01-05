@@ -21,10 +21,9 @@
         Ngày sinh: <input type="date" name="birth">
         Ngành học:
         <select name="subject">
-            <option value="CNTT">CNTT</option>
-            <option value="Điện">Điện</option>
-            <option value="Chế biến thực phẩm">Chế biến thực phẩm</option>
-            <option value="Kinh doanh">Kinh doanh</option>
+            <option value="PHP">PHP</option>
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
         </select>
         Quê quán: <input type="text" name="from">
         <button type="submit">Tạo</button>

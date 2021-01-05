@@ -21,10 +21,9 @@
         Ngày sinh: <input type="date" name="birth" value="2020-12-20">
         Ngành học:
         <select name="subject">
-            <option value="CNTT">CNTT</option>
-            <option value="Điện">Điện</option>
-            <option value="Chế biến thực phẩm">Chế biến thực phẩm</option>
-            <option value="Kinh doanh">Kinh doanh</option>
+            <option value="PHP">PHP</option>
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
         </select>
         Quê quán: <input type="text" name="from">
         <button type="submit">Lưu</button>
@@ -35,6 +34,5 @@
 </html>
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $test = $_POST['birth'];
-    echo $test;
+
 }
