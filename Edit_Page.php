@@ -1,3 +1,6 @@
+<?php
+include_once 'Manager.php';
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,6 +13,7 @@
 <body>
 <form action="Action_Page.php" method="post">
     <input type="text" name="action" value="update" hidden="hidden">
+    <input type="text" name="index" hidden="hidden">
     <fieldset>
         <legend>Sửa thông tin sinh viên</legend>
         Tên: <input type="text" name="name">
@@ -34,5 +38,24 @@
 </html>
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $index = $_POST['index'];
 
+    $manager = new Manager();
+    $student = $manager->get($index);
+
+    $name = $student->getName();
+    $gender = $student->getGender();
+    $birth = $student->getBirth();
+    $code = $student->getCode();
+    $subject = $student->getSubject();
+    $from = $student->getFrom();
+
+    $script = "<script>
+            document.getElementById('name').value = '$name';
+            document.getElementById('gender').value = '$gender';
+            document.getElementById('birth').value = '$birth';
+            document.getElementById('subject').value = '$subject';
+            document.getElementById('from').value = '$from';
+        </script>";
+    echo $script;
 }

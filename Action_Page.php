@@ -24,8 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             unset($student);
             break;
         case 'update':
-            break;
-        case 'edit':
 
             break;
         case 'delete':

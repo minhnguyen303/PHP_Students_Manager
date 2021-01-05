@@ -35,7 +35,7 @@
         <th></th>
     </tr>
     <script>
-        function clickSubmit(action,id) {
+        function clickSubmit(id) {
             let confirm = window.confirm("Do you really want to delete it !?!?!?");
             if (confirm == true) {
                 document.getElementById("btnSubmitDelete" + id).click();
@@ -60,7 +60,6 @@
                 <td><?php echo $student->getFrom()?></td>
                 <td>
                     <form action="Edit_Page.php" method="post" style="display: inline">
-                        <input type="text" name="action" value="edit" hidden="hidden">
                         <input type="text" name="index" value="<?php echo $key?>" hidden="hidden">
                         <button type="submit">Sửa</button>
                     </form>
@@ -68,7 +67,7 @@
                         <input id="inputActionEdit<?php echo $key?>" type="text" name="action" value="delete" hidden="hidden">
                         <input type="text" name="index" value="<?php echo $key?>" hidden="hidden">
                         <button id="btnSubmitDelete<?php echo $key?>" hidden="hidden" type="submit"></button>
-                        <button type="button" onclick="clickSubmit('delete','<?php echo $key?>')">Xóa</button>
+                        <button type="button" onclick="clickSubmit('<?php echo $key?>')">Xóa</button>
                     </form>
                 </td>
             </tr>
