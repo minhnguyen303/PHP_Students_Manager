@@ -36,13 +36,10 @@
     </tr>
     <script>
         function clickSubmit(action,id) {
-            if (action === 'edit'){
-                document.getElementById('inputActionEdit' + id).value = 'edit';
+            let confirm = window.confirm("Do you really want to delete it !?!?!?");
+            if (confirm == true) {
+                document.getElementById("btnSubmitEdit" + id).click();
             }
-            else {
-                document.getElementById('inputActionEdit' + id).value = 'delete';
-            }
-            document.getElementById('btnSubmitEdit' + id).click();
         }
     </script>
     <?php include_once 'Manager.php';?>
@@ -62,11 +59,15 @@
                 <td><?php echo $student->getSubject()?></td>
                 <td><?php echo $student->getFrom()?></td>
                 <td>
-                    <form action="Action_Page.php" method="post">
-                        <input id="inputActionEdit<?php echo $key?>" type="text" name="action" value="edit" hidden="hidden">
+                    <form action="Edit_Page.php" method="post" style="display: inline">
+                        <input type="text" name="action" value="edit" hidden="hidden">
                         <input type="text" name="index" value="<?php echo $key?>" hidden="hidden">
-                        <button id="btnSubmitEdit<?php echo $key?>" hidden="hidden" type="submit"></button>
-                        <button type="button" onclick="clickSubmit('edit','<?php echo $key?>')">Sửa</button>
+                        <button type="submit">Sửa</button>
+                    </form>
+                    <form action="Action_Page.php" method="post" style="display: inline">
+                        <input id="inputActionEdit<?php echo $key?>" type="text" name="action" value="delete" hidden="hidden">
+                        <input type="text" name="index" value="<?php echo $key?>" hidden="hidden">
+                        <button id="btnSubmitDelete<?php echo $key?>" hidden="hidden" type="submit"></button>
                         <button type="button" onclick="clickSubmit('delete','<?php echo $key?>')">Xóa</button>
                     </form>
                 </td>
